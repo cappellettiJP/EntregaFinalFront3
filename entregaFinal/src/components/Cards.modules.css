@@ -1,0 +1,24 @@
+.dentist-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+
+}
+
+
+.Cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border: 3px solid #bbb;
+    background-color: antiquewhite;
+    color : black;
+}
+
+.Cards h2 {
+    color: rgb(0, 255, 26);
+
+}
