@@ -1,14 +1,16 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
 import './App.css'
 import DentistList from './components/DentistList'
 import ContactForm from './components/ContactForm'
+import Header from './components/Header'
+
 
 function App() {
   
 
   return (
     <>
+    <Header />
     <div>
       <DentistList />
     </div>
@@ -16,8 +18,6 @@ function App() {
       <h1>Contacto</h1>
       <ContactForm />
     </div>
-
-
     </>
   )
 }

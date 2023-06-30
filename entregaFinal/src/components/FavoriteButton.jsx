@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import styles from './FavoriteButton.module.css';
 
-const FavoriteButton = () => {
+const FavoriteButton = ({onClick}) => {
   const [isFavorite, setIsFavorite] = useState(false);
+
+  
 
   const handleToggleFavorite = () => {
     setIsFavorite(!isFavorite);
+    onClick();
   };
 
   return (
