@@ -5,13 +5,17 @@ import './Cards.modules.css';
 const Cards = ({ dentist }) => {
   const handleAddToFavorites = () => {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    const isAlreadyFavorite = favorites.some((favorite) => favorite.id === dentist.id);
+    const index = favorites.findIndex((favorite) => favorite.id === dentist.id);
+
     
-    if (!isAlreadyFavorite) {
+    if (index === -1) {
       favorites.push(dentist);
       localStorage.setItem('favorites', JSON.stringify(favorites));
       console.log('Tarjeta agregada a favoritos:', dentist);
     } else {
+      favorites.splice(index, 1);
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+            console.log('Tarjeta eliminada de favoritos:', dentist);
       console.log('Esta tarjeta ya está en favoritos:', dentist);
     }
   };
